@@ -19,7 +19,10 @@ export const getPosts = () => async (dispatch) => {
 
 export const getPostsBySearch = (searchQuery) => async (dispatch) => {
   try {
-    const { data } = await api.fetchPostsBySearch(searchQuery);
+    // destructure data two times (1) making axios req. (2) put it in a data object where it has a data property
+    const {
+      data: { data },
+    } = await api.fetchPostsBySearch(searchQuery);
 
     console.log(data);
   } catch (error) {

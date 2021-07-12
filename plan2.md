@@ -25,3 +25,16 @@
 * First to dispatch the action in the SearchPost we in actions/posts.js make a reducer **getPostsBySearch** in which we get searchQuery as a parameter and we fetch the searchQuery by **fetchPostsBySearch** and pass the searchQuery.
 * Now for this reducer we have to create an endpoint in the index.js so we make that and pass the query in the path.
 * Now in home.js in searchPost we dispatch the getPostBySearch function with **search and tags** as the parameters and as taga are an array so we use the **.join** to join the different array elements by ','.
+
+> DIFFERECE BETWEEN qUERY AND PARAMS
+
+- QUERY -> /posts?page=1
+- PARAMS -> /posts/:id
+
+#### SERVER:
+
+- First in the routes we add the getPostBySearch route and now to manage this route we have to add the logic to the controllers folder we make the getPostBySearch controller.
+- IN there we first take the title and then search in the posts by using those '$' operators firstly the title and then the tags which are an array so split those by ','.
+- at last just to check in the action/posts.js{frontend} we destructure data two times.
+
+* When we check we see that the search by name works but the search by tags is not working so fixing that.
