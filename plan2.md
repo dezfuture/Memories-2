@@ -22,3 +22,6 @@
   - make the add and delete handler.
 * we also introduced the **handleKeypress** to trigger search even when **Enter** is pressed.
 * In the Button we add the searchPost to search the post.
+* First to dispatch the action in the SearchPost we in actions/posts.js make a reducer **getPostsBySearch** in which we get searchQuery as a parameter and we fetch the searchQuery by **fetchPostsBySearch** and pass the searchQuery.
+* Now for this reducer we have to create an endpoint in the index.js so we make that and pass the query in the path.
+* Now in home.js in searchPost we dispatch the getPostBySearch function with **search and tags** as the parameters and as taga are an array so we use the **.join** to join the different array elements by ','.
