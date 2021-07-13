@@ -48,5 +48,10 @@
 * To handle this pagination effect first in our frontend we remove the useEffect from the Home.js and instead of that in the Pagination component pass the **page** as prop and then in the padination.jsx we destructure the page prop and use useEffect to dispatch the getPosts() function.
 * Then in the action/posts.js we in the getPosts() action pass **page** as prop and then pass it to fetchPosts(**data**) now to send such req to the backend in the api/index.js we modify the fetchPosts() and also the path by giving it a dynamic string literal.
 
-<!-- #### BACKEND:
-* -->
+#### BACKEND:
+
+- In the controller/posts we took the data from the req.query and then declared the startIndex and limit and also made the post an object instead of an array.
+
+#### Frontend:
+
+- here changes many things for the pagination to work see the commit. -12

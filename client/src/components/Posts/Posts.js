@@ -6,10 +6,11 @@ import Post from "./Post/Post";
 import useStyles from "./styles";
 
 const Posts = ({ setCurrentId }) => {
-  const posts = useSelector((state) => state.posts);
+  //  first we had a posts array but now it's an object
+  const { posts } = useSelector((state) => state.posts);
   const classes = useStyles();
 
-  return !posts.length ? (
+  return !posts?.length ? (
     <CircularProgress />
   ) : (
     <Grid
