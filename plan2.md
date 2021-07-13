@@ -38,3 +38,4 @@
 - at last just to check in the action/posts.js{frontend} we destructure data two times.
 
 * When we check we see that the search by name works but the search by tags is not working so fixing that.
+* on seeing the code the mistake leading to this is that in Home.js in the searchPosts we are only looking for search term so we add **|| tags**.
