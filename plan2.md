@@ -72,3 +72,5 @@
 * then in the **backend** we state the route of the post in routes/posts and the logic of that post in the controller.
 * Now as we send the payload from the actions so in the reducers import FETCH_POST we write it's case.
 * Added the recommendedPosts section in which the posts are recommended on the bases of there tags.
+
+SITE URL -> https://mem2-pro.netlify.app/posts
