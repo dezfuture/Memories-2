@@ -63,3 +63,11 @@
 - After doing this for handling the functionality we in the reducers define two new cases for **startLoading and endLoading** and write the return statement for them we also change the state to an object where isLoading is true and also pass the posts array.
 - Due to the initialization of the state in the form of an object in the reducers/posts.js we have to change the type we return for every case now .
 - Then In posts.js where the posts are rendered we conditionally render the isLoading and also in the Home.js we only show pagiantion when required.
+
+* What happens when we click on a post , for now nothing but now we will create a different window for every post click.
+* In Post.js we import ButtonBase and pass as a component.
+* Then the openPost fucntion defined we use useHistory to go to that url.
+* Now in postDetails.js we import all comp. needed and then we use useEffect when the id changes we dispatch a getPost function and also use useSelector and destructure **post, posts, isLoading** then write the code for displaying that particular post.
+* For this getPost we create a new action in action/posts.js and then create a new **FETCH_POST** action constant and then in the api/index.js we create the fetchPost and give the required path.
+* then in the **backend** we state the route of the post in routes/posts and the logic of that post in the controller.
+* Now as we send the payload from the actions so in the reducers import FETCH_POST we write it's case.
