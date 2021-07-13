@@ -44,6 +44,9 @@ const Home = () => {
     if (search.trim() || tags) {
       // dispatch => fetch search Post
       dispatch(getPostsBySearch({ search, tags: tags.join(",") }));
+      history.push(
+        `/posts/search?searchQuery=${search || "none"}&tags=${tags.join(",")}}`
+      );
     } else {
       // redirect back
       history.push("/");

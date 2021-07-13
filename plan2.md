@@ -39,3 +39,8 @@
 
 * When we check we see that the search by name works but the search by tags is not working so fixing that.
 * on seeing the code the mistake leading to this is that in Home.js in the searchPosts we are only looking for search term so we add **|| tags**.
+
+#### CLIENT:
+
+- When we search now we wanna see the posts related to that search or tag search so first in Home.js we first did history.push and then pushed the queried url.
+- Then in the action/posts.js instead of console.logging the data we dispatch the action and gave it a new type **FETCH_BY_SEARCH** now also in the actiontypes.js we add this type and finally in the reducers we added the new case. Now we are able to search the posts related to that search.
