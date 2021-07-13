@@ -44,3 +44,9 @@
 
 - When we search now we wanna see the posts related to that search or tag search so first in Home.js we first did history.push and then pushed the queried url.
 - Then in the action/posts.js instead of console.logging the data we dispatch the action and gave it a new type **FETCH_BY_SEARCH** now also in the actiontypes.js we add this type and finally in the reducers we added the new case. Now we are able to search the posts related to that search.
+
+* To handle this pagination effect first in our frontend we remove the useEffect from the Home.js and instead of that in the Pagination component pass the **page** as prop and then in the padination.jsx we destructure the page prop and use useEffect to dispatch the getPosts() function.
+* Then in the action/posts.js we in the getPosts() action pass **page** as prop and then pass it to fetchPosts(**data**) now to send such req to the backend in the api/index.js we modify the fetchPosts() and also the path by giving it a dynamic string literal.
+
+<!-- #### BACKEND:
+* -->
