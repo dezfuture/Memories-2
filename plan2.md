@@ -55,3 +55,11 @@
 #### Frontend:
 
 - here changes many things for the pagination to work see the commit. -12
+  > will add the steps after some time.:)
+
+> Working on displaying the loading state-> /posts
+
+- Firstly we have to create two new constants in constants/actionType.js and then we have in our action/posts.js we first import those named constants and then dispatch them when needed.
+- After doing this for handling the functionality we in the reducers define two new cases for **startLoading and endLoading** and write the return statement for them we also change the state to an object where isLoading is true and also pass the posts array.
+- Due to the initialization of the state in the form of an object in the reducers/posts.js we have to change the type we return for every case now .
+- Then In posts.js where the posts are rendered we conditionally render the isLoading and also in the Home.js we only show pagiantion when required.
